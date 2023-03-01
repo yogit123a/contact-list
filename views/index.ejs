@@ -1,0 +1,25 @@
+
+<html><head></head>
+    <body>
+    <h1>This is express project</h1>
+    <h2>
+        <%= title %>
+    </h2>
+    <h1>contact list</h1>
+
+    <% for (i of list) { %>
+    <ul>
+        <li>
+            <%= i.phone%>
+            <%= i.name%>
+
+        </li>
+    </ul>
+<%}%>
+<form action="/create" method="post">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="phone" placeholder="phone">
+    <button type="submit">Add Contact</button>
+</form>
+</body>
+</html>
